@@ -41,19 +41,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="cb2-H8-q4U" kind="presentation" identifier="loginToHome" id="w5Z-wA-klS"/>
+                        <segue destination="cb2-H8-q4U" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="w5Z-wA-klS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaW-0F-4pE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2300" y="-332.38380809595208"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="yIh-xg-XLu">
             <objects>
                 <tableViewController id="EA6-DI-g84" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8fi-UA-PTb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="EA6-DI-g84" id="2sz-MA-dKy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="iiP-YU-c2N"/>
+                    <navigationItem key="navigationItem" title="Home" id="iiP-YU-c2N"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBa-Po-eXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,8 +82,9 @@
             <objects>
                 <navigationController id="cb2-H8-q4U" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOS-Ww-6j2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26170852779999998" green="0.64546984429999998" blue="0.92219311000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="EA6-DI-g84" kind="relationship" relationship="rootViewController" id="Xct-ha-WdS"/>
