@@ -1,8 +1,8 @@
-# Project 3 - *Name of App Here*
+# Project 3 - Chirp
 
-**Name of your app** is a basic twitter app to read your tweets.
+Chirp is a basic twitter app to read your tweets.
 
-Time spent: **X** hours spent in total
+Time spent: 1 hours spent in total
 
 ## User Stories
 
