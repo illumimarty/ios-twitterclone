@@ -25,6 +25,7 @@ class HomeTableTableViewController: UITableViewController {
         TwitterAPICaller.client?.logout() // actually logs out from Twitter
         
         self.dismiss(animated: true, completion: nil) // animation for leaving Home screen
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
     }
     
     
