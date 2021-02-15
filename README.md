@@ -1,8 +1,8 @@
-# Project 3 - Chirp
+# Project 3 - Twitter
 
-Chirp is a basic twitter app to read your tweets.
+This Twitter clone is a basic app that reads tweets.
 
-Time spent: 2 hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
