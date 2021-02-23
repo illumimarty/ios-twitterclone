@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HomeTableTableViewController: UITableViewController {
 
     var tweetArray = [NSDictionary]()
@@ -17,12 +18,17 @@ class HomeTableTableViewController: UITableViewController {
         super.viewDidLoad()
         loadTweets()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
 
     func loadTweets() {
         
         let apiUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let params = ["count": 15]
+        
+//        TwitterAPICaller.client?.ge
         
         TwitterAPICaller.client?.getDictionariesRequest(url: apiUrl, parameters: params, success: { (tweets: [NSDictionary]) in
             
@@ -44,6 +50,11 @@ class HomeTableTableViewController: UITableViewController {
         
         self.dismiss(animated: true, completion: nil) // animation for leaving Home screen
         UserDefaults.standard.set(false, forKey: "isLoggedIn")
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tweetArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +79,7 @@ class HomeTableTableViewController: UITableViewController {
         
         return cell
     }
+    
 
     /*
     // MARK: - Navigation
