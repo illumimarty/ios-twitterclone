@@ -20,7 +20,9 @@ class HomeTableTableViewController: UITableViewController {
         super.viewDidLoad()        
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
-        
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 150
+//        self.tableView.rowHeight = 150
 //        tableView.delegate = self
 //        tableView.dataSource = self
     }
