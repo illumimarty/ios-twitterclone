@@ -51,7 +51,7 @@
         <!--Home-->
         <scene sceneID="yIh-xg-XLu">
             <objects>
-                <tableViewController id="EA6-DI-g84" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="EA6-DI-g84" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8fi-UA-PTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,7 @@
         <!--DraftViewController-->
         <scene sceneID="i3v-3a-BB8">
             <objects>
-                <viewController title="DraftViewController" id="vt8-go-QQL" customClass="DraftViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DraftViewController" modalPresentationStyle="fullScreen" id="vt8-go-QQL" customClass="DraftViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Us-WC-vp3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetText" destination="DKi-6P-ZJJ" id="q6C-x7-DEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5s-oq-0XL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +190,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Xw0-5V-uWx">
             <objects>
-                <navigationController id="cb2-H8-q4U" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="cb2-H8-q4U" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOS-Ww-6j2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -207,7 +210,7 @@
         <!--Navigation Controller-->
         <scene sceneID="K6U-eJ-VTU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ce1-9z-0mw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Ce1-9z-0mw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9pB-wY-Vfp">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="3jH-tP-o0v"/>

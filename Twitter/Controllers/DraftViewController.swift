@@ -16,12 +16,25 @@ class DraftViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var tweetText: UITextView!
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func publish(_ sender: Any) {
+        if (!tweetText.text.isEmpty) {
+            TwitterAPICaller.client?.postTweet(tweetString: tweetText.text, success: {
+                self.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                print("Error posting tweet \(error)")
+            })
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    
     /*
     // MARK: - Navigation
 
