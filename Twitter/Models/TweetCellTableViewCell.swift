@@ -30,6 +30,21 @@ class TweetCellTableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteTweet(_ sender: Any) {
+        let toBeFavorited = !isFavorited
+        
+        if (toBeFavorited) {
+            TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
+                self.setFavorite(true)
+            }, failure: { (Error) in
+                print("Favorite did not succed: \(Error)")
+            })
+        } else {
+            TwitterAPICaller.client?.unfavoriteTweet(tweetId: tweetId, success: {
+                self.setFavorite(false)
+            }, failure: { (Error) in
+                print("Unfavorite did not succed: \(Error)")
+            })
+        }
     }
     
     @IBAction func retweet(_ sender: Any) {
